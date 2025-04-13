@@ -6,6 +6,12 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
+  <!-- font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- link to tailwind style sheet -->
   <link href="./output.css" rel="stylesheet">
   
   <title>Frontend Mentor | NFT preview card component</title>
@@ -17,17 +23,61 @@
   </style>
   
 </head>
-<body>
-  Equilibrium #3429
+<body class="font-outfit bg-mainBg p-7">
+<!-- card container -->
 
-  Our Equilibrium collection promotes balance and calm.
+<div class="bg-cardBg shadow-md shadow-gray-950 p-4.5 rounded-2xl w-[85%] md:max-w-[40%] mx-auto space-y-2.5 overflow-hidden">
 
-  0.041 ETH
-  3 days left
+  <!-- image div -->
+ <div class="relative group ">
+ 
+  <img src="./images/image-equilibrium.jpg" alt="" class="rounded-xl z-20">
+
+  <div class="absolute top-0 h-full w-full bg-[#36e03680] rounded-xl flex justify-around -z-10 md:group-hover:z-10  transform ease-in duration-1000 group-hover:cursor-pointer">
+
+      <img src="/images/icon-view.svg" alt="view" class="w-[150px]">
+    
+  </div>
   
-  Creation of Jules Wyvern
+ </div>
 
-  <div class="attribution">
+  <h1 class="text-White hover:text-Cyan tracking-wider font-bold md:text-3xl">Equilibrium #3429</h1>
+
+  <p class="font-thin text-softBlue md:font-semibold">
+    Our Equilibrium collection promotes balance and calm.
+  </p>
+
+  <!-- price and time left div -->
+   <div class="flex justify-between items-center p-1">
+    <!-- price -->
+    <div class="flex space-x-1 items-center">
+      <img src="/images/icon-ethereum.svg" alt="icon-ethereum">
+      <h3 class="font-semibold text-Cyan md:font-bold">0.041 ETH</h3>
+    </div>
+
+    <!-- days left -->
+     <div class="flex space-x-1 items-center">
+      <img src="/images/icon-clock.svg" alt="icon-clock">
+      <h3 class="font-light text-softBlue md:font-semibold">3 days left</h3>
+     </div>
+
+   </div>
+
+   <!-- line -->
+   <div class="bg-veryDarkBlue p-[1px] mx-1.5"></div>
+
+   <!-- avatar -->
+    <div class="flex space-x-3 items-center">
+      <img src="./images/image-avatar.png" alt="image-avatar"
+      class="w-[40px] md:w-[60px] border-2 border-softBlue rounded-full"
+      >
+
+      <p class="text-softBlue md:font-semibold">Creation of <span class="font-semibold md:font-bold text-White hover:text-Cyan">Jules Wyvern</span></p>
+    </div>
+</div> 
+  
+
+  <div class="attribution mt-7">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
